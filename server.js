@@ -42,6 +42,5 @@ app.get('/devices/:id', (req, res) => {
       "X-Auth-Token": process.env.TOKEN,
     }
   };
-  console.log('res :', res);
   request(options).pipe(res)
 })
