@@ -7,8 +7,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Container></Container>
+        <Container>
           Packet API - List of Devices
+        </Container>
       <Container>
           <Row>
             <Col>

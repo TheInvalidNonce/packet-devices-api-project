@@ -15,17 +15,17 @@ app.use( (req, res, next) => {
   next();
 });
 
-const url = 'https://api.packet.net/projects';
+const projectsUrl = 'https://api.packet.net/projects';
+const devicesUrl = 'https://api.packet.net/devices/'
 
 
 app.listen(3001, (req, res) => {
-  console.log('process.env.TOKEN :', process.env.TOKEN);
   console.log('Express server is running on localhost:3001');
 });
 
 app.get('/projects', (req, res) => {
   let options = {
-    url: url,
+    url: projectsUrl,
     headers: {
       "content-type": "application/json" ,
       "X-Auth-Token": process.env.TOKEN,
@@ -34,3 +34,14 @@ app.get('/projects', (req, res) => {
   request(options).pipe(res)
 })
 
+app.get('/devices/:id', (req, res) => {
+  let options = {
+    url: devicesUrl + req.params.id,
+    headers: {
+      "content-type": "application/json" ,
+      "X-Auth-Token": process.env.TOKEN,
+    }
+  };
+  console.log('res :', res);
+  request(options).pipe(res)
+})

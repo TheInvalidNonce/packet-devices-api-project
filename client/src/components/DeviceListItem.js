@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
+import { ListGroup, Nav } from "react-bootstrap";
 
 export default class DeviceListItem extends Component {
+  
   render() {
     return (
-      <div>
-        
-      </div>
+      <ListGroup.Item>
+        <Nav.Link href={this.props.href}>
+          {this.props.href}
+        </Nav.Link>
+      </ListGroup.Item>
     )
   }
 }
