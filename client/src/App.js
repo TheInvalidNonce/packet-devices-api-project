@@ -5,6 +5,8 @@ import DeviceShow from "./components/DeviceShow";
 import { Switch, Route } from "react-router-dom";
 import { ListGroup } from "react-bootstrap";
 import DeviceListItem from "./components/DeviceListItem";
+import DeviceNew from './components/DeviceNew';
+import CustomNavbar from './components/CustomNavBar';
 import axios from "axios";
 import "./App.css";
 
@@ -71,13 +73,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <CustomNavbar />
         <Container>
           <h1 onClick={this.handleClick}>Packet API - List of Devices</h1>
         </Container>
         <Switch>
           <Route
-            exact
-            path="/"
+            exact path="/devices/new"
+            component={() => <DeviceNew />}
+          />
+          <Route
+            exact path="/"
             component={() => <DeviceList devices={this.state.devices} />}
           />
           <Route

@@ -44,3 +44,4 @@ app.get('/devices/:id', (req, res) => {
   };
   request(options).pipe(res)
 })
+

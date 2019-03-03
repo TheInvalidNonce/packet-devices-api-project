@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  padding: 40px;
 }
 
 .App-logo {
@@ -36,6 +35,14 @@
 .container {
   display: flex;
   justify-content: center;
+}
+
+.form-control {
+  width: 400px;
+}
+
+.generateBtn {
+  margin: 20px;
 }
 
 @keyframes App-logo-spin {
