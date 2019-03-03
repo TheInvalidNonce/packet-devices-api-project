@@ -1,5 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Steps to launch application:
+
+1. Clone this repo down.
+2. Run `npm install` or `yarn`.
+3. Type `npm start server.js` in the top level folder to start the server.
+4. In another terminal instance type `cd client && npm start` to start the React client.
+
 ## Available Scripts
 
 In the project directory, you can run:
